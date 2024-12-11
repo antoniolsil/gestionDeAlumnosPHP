@@ -25,9 +25,9 @@ Se puede acceder con el usuario *antoniols* y la contraseña *administrador*. Po
  
 ## Requisitos
 
-- Servidor web con soporte para PHP (por ejemplo, Apache).
+- Servidor web con soporte para PHP (como Apache o Nginx).
 - Base de datos MariaDB o MySQL.
-- PHP 7.4 o superior.
+- PHP 8.1.2 o superior.
 
 ## Instalación
 
@@ -36,52 +36,12 @@ Se puede acceder con el usuario *antoniols* y la contraseña *administrador*. Po
    git clone https://github.com/tuusuario/nombre-del-repositorio.git
    ```
 
-2. **Configura la base de datos**:
-   - Importa el archivo SQL proporcionado para crear las tablas necesarias (`students` y `users`).
-
-3. **Configura las credenciales de la base de datos**:
-   - Edita el archivo de configuración donde se definen las credenciales de acceso a la base de datos.
-
-4. **Inicia el servidor**:
-   - Si estás utilizando PHP integrado:
-     ```bash
-     php -S localhost:8000
-     ```
-
 ## Uso
 
 1. Accede a la aplicación desde tu navegador en `http://localhost:8000`.
 2. Navega entre las secciones para gestionar estudiantes y usuarios.
 3. Usa el formulario de exportación para guardar los datos de los estudiantes en un archivo CSV.
 
-## Archivos Principales
-
-- `añadirEstudiantes.php`: Página para añadir nuevos estudiantes.
-- `añadirUsuarios.php`: Página para añadir nuevos usuarios.
-- `cambiarContraseña.php`: Página para cambiar contraseñas.
-- `exportarCSV.php`: Lógica para exportar datos de estudiantes a CSV.
-- `estadisticas.php`: Página para mostrar estadísticas de estudiantes.
-
-## Funcionalidades Adicionales
-
-- Validación de entradas en el lado del servidor.
-- Manejo de sesiones para mensajes de error y éxito.
-
-## Contribuciones
-
-Si deseas contribuir al proyecto:
-
-1. Haz un fork del repositorio.
-2. Crea una rama para tu característica o corrección:
-   ```bash
-   git checkout -b nueva-funcionalidad
-   ```
-3. Realiza tus cambios y súbelos:
-   ```bash
-   git commit -m "Descripción de los cambios"
-   git push origin nueva-funcionalidad
-   ```
-4. Abre un pull request explicando tus cambios.
 
 ## Autor
 
