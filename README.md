@@ -33,14 +33,23 @@ Se puede acceder con el usuario *antoniols* y la contraseña *administrador*. Po
 
 1. **Clona el repositorio**:
    ```bash
-   git clone https://github.com/tuusuario/nombre-del-repositorio.git
+   git clone https://github.com/antoniolsil/gestionDeAlumnosPHP
    ```
-
+2. **Instala los paquetes necesarios**:
+   ```bash
+    sudo apt install apache2 php php-mysqli php-pdo mariadb-server
+   ```
+3. **Importa la base de datos**:
+   ```bash
+   mysql -u root -p < /ruta/al/archivo/db_iaw_als.sql
+   ```
+4. **Mueve (si no lo habías hecho antes), los ficheros al directorio raiz de tu sitio web**
+   
 ## Uso
 
-1. Accede a la aplicación desde tu navegador en `http://localhost:8000`.
-2. Navega entre las secciones para gestionar estudiantes y usuarios.
-3. Usa el formulario de exportación para guardar los datos de los estudiantes en un archivo CSV.
+1. Accede a la aplicación desde tu navegador en `http://localhost`.
+2. Inica la sesión con un usuario y contraseña válido (según la tabla *users* de la base de datos)
+3. Utiliza el sitio web normalmente.
 
 
 ## Autor
