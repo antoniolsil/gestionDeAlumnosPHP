@@ -11,7 +11,7 @@ if ($_SESSION["sesion"] !== "iniciada") {
 include "../funciones/recoge.php";
 
 $addUsername = recoge("usuarioAñadir");
-$contraseña = recoge("contraseñaUsuario");
+$addpassword = recoge("contraseñaUsuario");
 
 
 // Comprobaciones
@@ -23,9 +23,9 @@ if ($addUsername === '') {
     $errores[] = 'The username cannot exceed 255 characters.';
 }
 
-if ($contraseña === '') {
+if ($addpassword === '') {
     $errores[] = 'The password field cannot be empty.';
-} elseif (strlen($contraseña) > 255) {
+} elseif (strlen($addpassword) > 255) {
     $errores[] = 'The password cannot exceed 255 characters.';
 }
 
@@ -69,7 +69,7 @@ try {
 
     $stmt = $conn->prepare('INSERT INTO users (username, password) VALUES (:username, :password)');
     $stmt->bindParam(':username', $addUsername);
-    $stmt->bindParam(':password', $contraseña);
+    $stmt->bindParam(':password', $addpassword);
     $stmt->execute();
 
     $_SESSION['success'] = 'User successfully added!';
